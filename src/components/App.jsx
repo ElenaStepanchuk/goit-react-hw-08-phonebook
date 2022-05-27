@@ -1,16 +1,22 @@
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { ContactsView } from 'views/ContactsView';
+import { HomeView } from 'views/HomeView';
+import { LoginView } from 'views/LoginView';
+import { RegisterView } from 'views/RegisterView';
+import { Layout } from './Layout';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Suspense fallback="">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomeView />} />
+          <Route path="register" element={<RegisterView />} />
+          <Route path="login" element={<LoginView />} />
+          <Route path="contacts" element={<ContactsView />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 };
