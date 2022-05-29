@@ -1,0 +1,20 @@
+.user_menu__container {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.user_menu__span {
+  display: block;
+  margin-right: 20px;
+  padding: 10px;
+  font-weight: bold;
+  color: blue;
+  right: 20px;
+}
+.btn_exit {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

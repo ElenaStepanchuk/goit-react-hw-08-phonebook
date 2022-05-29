@@ -1,0 +1,13 @@
+.nav_conteiner {
+  display: flex;
+}
+.navigate {
+  /* display: flex; */
+  flex-wrap: wrap-reverse;
+  font-weight: bold;
+  color: blue;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+}

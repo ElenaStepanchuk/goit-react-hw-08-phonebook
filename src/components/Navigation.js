@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import css from './Navigation.module.css';
 export const Navigation = () => {
   return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/contacts">Contacts</Link>
-      </li>
-    </ul>
+    <div className={css.nav_conteiner}>
+      <NavLink className={css.navigate} to="/">
+        Home
+      </NavLink>
+      <NavLink className={css.navigate} to="/contacts">
+        Contacts
+      </NavLink>
+    </div>
   );
 };

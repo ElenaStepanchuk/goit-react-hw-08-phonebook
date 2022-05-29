@@ -1,0 +1,15 @@
+.auth_nav__conteiner {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 450px;
+}
+.auth_nav__link {
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: bold;
+  color: blue;
+  text-transform: uppercase;
+  margin-left: 20px;
+  text-decoration: none;
+}

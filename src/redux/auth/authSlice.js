@@ -1,44 +1,47 @@
-// import { createSlice } from '@reduxjs/toolkit';
-// const contactSlice = createSlice({
-//   name: 'auth',
-//   initialState: {
-//     user: { email: null, password: null, name: null },
-//     token: null,
-//     login: false,
-//     isFetchingCarrentUser: false,
-//   },
-//   extraReducers: {
-//     [addUser.fulfilled]: (state, { payload }) => {
-//       state.user.email = payload.user.email;
-//       state.user.name = payload.user.name;
-//       state.token = payload.token;
-//       state.login = true;
-//     },
-//     [addUser.rejected]: state => {
-//       alert('Что-то пошло не так, повторите');
-//       state.login = false;
-//     },
-//     [logOutUser.fulfilled]: state => {
-//       state.user.email = null;
-//       state.user.name = null;
-//       state.token = null;
-//       state.login = false;
-//     },
-//     [logInUser.pending]: (state, { payload }) => {
-//       state.user.email = payload.user.email;
-//       state.user.name = payload.user.name;
-//       state.token = payload.token;
-//       state.login = true;
-//       state.isFetchingCurrentUser = false;
-//     },
-//     [logInUser.fulfilled]: (state, { payload }) => {
-//       state.isLoading = false;
-//       state.contacts = state.contacts.filter(contact => contact.id !== payload);
-//     },
-//     [logInUser.rejected]: state => {
-//       alert('Что-то пошло не так, повторите');
-//       state.login = false;
-//       state.isFetchingCurrentUser = false;
-//     },
-//   },
-// });
+import { createSlice } from '@reduxjs/toolkit';
+import { logIn, register } from './authOperations';
+
+const initialState = {
+  user: { name: null, email: null },
+  token: null,
+  isLogedIn: false,
+  isLoading: false,
+  error: null,
+};
+const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  extraReducers: {
+    [register.fulfilled]: (state, { payload }) => {
+      state.user = payload.user;
+      state.token = payload.token;
+      state.isLogedIn = true;
+      state.isLoading = false;
+      state.error = null;
+    },
+    // [createUser.pending]: (state, { payload }) => {
+    //   state.isLoading = false;
+    //   state.contacts = payload;
+    // },
+    // [createUser.rejected]: (state, { payload }) => {
+    //   state.isLoading = false;
+    //   state.error = payload;
+    // },
+    [logIn.fulfilled]: (state, { payload }) => {
+      state.user = payload.user;
+      state.token = payload.token;
+      state.isLogedIn = true;
+      state.isLoading = false;
+      state.error = null;
+    },
+    // [logInUser.fulfilled]: (state, { payload }) => {
+    //   state.isLoading = false;
+    //   state.contacts.push(payload);
+    // },
+    // [logInUser.rejected]: (state, { payload }) => {
+    //   state.isLoading = false;
+    //   state.error = payload;
+    // },
+  },
+});
+export default authSlice.reducer;

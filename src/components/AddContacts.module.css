@@ -1,0 +1,13 @@
+.add_contacts {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+  font-weight: bold;
+  color: blue;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: center;
+}

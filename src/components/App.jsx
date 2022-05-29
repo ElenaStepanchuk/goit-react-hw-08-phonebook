@@ -1,12 +1,14 @@
+import './App.css';
+import React from 'react';
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { ContactsView } from 'views/ContactsView';
-import { HomeView } from 'views/HomeView';
-import { LoginView } from 'views/LoginView';
-import { RegisterView } from 'views/RegisterView';
+import { ContactsView } from '../views/ContactsView';
+import { HomeView } from '../views/HomeView';
+import { LoginView } from '../views/LoginView';
+import { RegisterView } from '../views/RegisterView';
 import { Layout } from './Layout';
 
-export const App = () => {
+const App = () => {
   return (
     <Suspense fallback="">
       <Routes>
@@ -20,3 +22,4 @@ export const App = () => {
     </Suspense>
   );
 };
+export default App;
