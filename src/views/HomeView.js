@@ -1,3 +1,6 @@
+import { useSelector } from 'react-redux';
+import { getUserName } from '../redux/auth/authSelectors';
 export const HomeView = () => {
-  return <h1>Hello</h1>;
+  const name = useSelector(getUserName);
+  return <h1>Hello, {name}!</h1>;
 };

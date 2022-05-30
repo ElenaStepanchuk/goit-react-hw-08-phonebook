@@ -1,5 +1,8 @@
 .nav_conteiner {
   display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  background-color: rgb(255, 192, 110);
 }
 .navigate {
   /* display: flex; */

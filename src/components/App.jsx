@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import { ContactsView } from '../views/ContactsView';
 import { HomeView } from '../views/HomeView';
 import { LoginView } from '../views/LoginView';
@@ -19,6 +19,7 @@ const App = () => {
           <Route path="contacts" element={<ContactsView />} />
         </Route>
       </Routes>
+      {/* <Outlet /> */}
     </Suspense>
   );
 };

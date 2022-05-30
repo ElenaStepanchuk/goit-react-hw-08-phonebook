@@ -60,8 +60,8 @@ export const LogInForm = () => {
           value={password}
           type="text"
           name="password"
-          pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-          title="Password must be uppercase and lowercase latin letters, numbers, special characters. Minimum 8 characters."
+          // pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          // title="Password must be uppercase and lowercase latin letters, numbers, special characters. Minimum 8 characters."
           required
           id={passwordInputId}
         />

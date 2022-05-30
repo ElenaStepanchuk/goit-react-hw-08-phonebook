@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
 import css from './Navigation.module.css';
 export const Navigation = () => {
   return (
@@ -9,6 +10,7 @@ export const Navigation = () => {
       <NavLink className={css.navigate} to="/contacts">
         Contacts
       </NavLink>
+      {/* <Outlet /> */}
     </div>
   );
 };
