@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
-import css from './RegisterForm.module.css';
+import css from './Register&&LogInForm.module.css';
 import { logIn } from '../redux/auth/authOperations';
 // import PropTypes from 'prop-types';
 // import { addContact } from 'redux/contacts/contactsOperations';

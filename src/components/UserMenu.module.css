@@ -1,7 +1,7 @@
 .user_menu__container {
   display: flex;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
 }
 .user_menu__span {

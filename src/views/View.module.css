@@ -1,9 +1,29 @@
 .tittle_view {
   text-align: center;
   font-weight: bold;
-  color: blue;
+  /* color: blue; */
+  color: white;
   text-transform: uppercase;
   margin-left: 20px;
   margin-top: 20px;
+  text-decoration: none;
+}
+.tittle_view__homepage {
+  text-align: center;
+  font-weight: bold;
+  font-size: 120px;
+  /* color: blue; */
+  color: white;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.description_homepage {
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  /* color: blue; */
+  color: white;
   text-decoration: none;
 }

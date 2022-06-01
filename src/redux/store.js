@@ -18,6 +18,7 @@ const persistConfigAuth = {
   key: 'auth',
   storage,
   whitlist: ['token'],
+  // blacklist: ['user', 'isLoggedIn'],
 };
 const persistReducerAuth = persistReducer(persistConfigAuth, authSlice);
 export const store = configureStore({
@@ -33,4 +34,4 @@ export const store = configureStore({
       },
     }),
 });
-export let persistor = persistStore(store);
+export const persistor = persistStore(store);

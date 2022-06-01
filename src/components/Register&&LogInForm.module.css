@@ -2,15 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  border: 1px solid rgb(91, 7, 94);
-  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  /* border: 1px solid rgb(91, 7, 94);
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset; */
   margin-left: auto;
   margin-right: auto;
   width: 300px;
 }
 .registerForm__label {
   margin-bottom: 20px;
-  color: blue;
+  /* color: blue; */
+  color: white;
   font-weight: bold;
 }
 .registerForm__input_name {
@@ -28,8 +29,10 @@
 .registerForm__btn {
   margin-left: auto;
   margin-right: auto;
-  background-color: blue;
-  color: white;
+  /* background-color: blue;
+  color: white; */
+  background-color: white;
+  color: blue;
   padding: 10px;
   border-radius: 5px;
 }
