@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import css from './Register&&LogInForm.module.css';
 import { register } from 'redux/auth/authOperations';
-// import PropTypes from 'prop-types';
-// import { addContact } from 'redux/contacts/contactsOperations';
-import { useDispatch, useSelector } from 'react-redux';
-// import { getContacts } from 'redux/contacts/contactsSelector';
+import { useDispatch } from 'react-redux';
 export const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,7 +11,6 @@ export const RegisterForm = () => {
   let emailInputId = nanoid();
   let passwordInputId = nanoid();
   const dispatch = useDispatch();
-  //   const contacts = useSelector(getContacts);
   const handleInputChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'name':

@@ -13,12 +13,10 @@ import storage from 'redux-persist/lib/storage';
 import contactsReducer from '../redux/contacts/contactsReducer';
 import { filterReducer } from '../redux/contacts/contactsReducer';
 import authSlice from '../redux/auth/authSlice';
-
 const persistConfigAuth = {
   key: 'auth',
   storage,
   whitlist: ['token'],
-  // blacklist: ['user', 'isLoggedIn'],
 };
 const persistReducerAuth = persistReducer(persistConfigAuth, authSlice);
 export const store = configureStore({

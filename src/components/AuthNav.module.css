@@ -12,4 +12,11 @@
   text-transform: uppercase;
   margin-left: 20px;
   text-decoration: none;
+  padding: 7px;
+}
+.auth_nav__link:hover,
+.auth_nav__link:focus {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
 }

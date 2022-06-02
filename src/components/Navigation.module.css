@@ -5,7 +5,6 @@
   background-color: rgb(255, 192, 110);
 }
 .navigate {
-  /* display: flex; */
   flex-wrap: wrap-reverse;
   font-weight: bold;
   color: blue;
@@ -13,4 +12,11 @@
   margin-left: 20px;
   margin-top: 20px;
   text-decoration: none;
+  padding: 7px;
+}
+.navigate:hover,
+.navigate:focus {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
 }

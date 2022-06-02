@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 axios.defaults.baseURL = `https://connections-api.herokuapp.com`;
-
 const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -10,7 +9,6 @@ const token = {
     axios.defaults.headers.common.Authorization = ``;
   },
 };
-
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, { rejectWithValue }) => {
@@ -35,7 +33,6 @@ export const logIn = createAsyncThunk(
     }
   }
 );
-
 export const logOut = createAsyncThunk(
   'auth/logOut',
   async (_, { rejectWithValue }) => {
@@ -47,7 +44,6 @@ export const logOut = createAsyncThunk(
     }
   }
 );
-
 export const fetchCurrentUser = createAsyncThunk(
   'auth/reftesh',
   async (_, thunkAPI) => {

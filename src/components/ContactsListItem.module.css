@@ -6,9 +6,9 @@
   margin-left: 20px;
   margin-right: 40px;
 }
-.edit__btn {
-  background-color: white;
-  color: blue;
-  padding: 10px;
+.del__btn:hover,
+.del__btn:focus {
+  background-color: blue;
+  color: white;
   border-radius: 5px;
 }

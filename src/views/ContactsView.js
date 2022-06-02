@@ -1,5 +1,6 @@
 import AddContacts from '../components/AddContacts';
 import React from 'react';
-export const ContactsView = () => {
+const ContactsView = () => {
   return <AddContacts />;
 };
+export default ContactsView;

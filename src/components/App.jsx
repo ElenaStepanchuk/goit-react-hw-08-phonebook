@@ -1,45 +1,68 @@
 import './App.css';
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { ContactsView } from '../views/ContactsView';
-import { HomeView } from '../views/HomeView';
-import { LoginView } from '../views/LoginView';
-import { RegisterView } from '../views/RegisterView';
-import { Layout } from './Layout';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchCurrentUser } from 'redux/auth/authOperations';
+import { getIsFetchingCurrentUser } from 'redux/auth/authSelectors';
+import Spiner from './Spiner';
 import PrivateRoute from './PrivateRoute';
-
-// const Layout = lazy(() => import('../components/Layout'));
-// const HomeView = lazy(() => import('../views/HomeView'));
-// const RegisterView = lazy(() => import('../views/RegisterView'));
-// const LoginView = lazy(() => import('../views/LoginView'));
-// const ContactsView = lazy(() => import('../views/ContactsView'));
-
+import PublicRoute from './PublicRoute';
+const Layout = lazy(() => import('../components/Layout'));
+const HomeView = lazy(() => import('../views/HomeView'));
+const RegisterView = lazy(() => import('../views/RegisterView'));
+const LoginView = lazy(() => import('../views/LoginView'));
+const ContactsView = lazy(() => import('../views/ContactsView'));
 const App = () => {
   const dispatch = useDispatch();
+  const isFetchingCurrentUser = useSelector(getIsFetchingCurrentUser);
   useEffect(() => {
     dispatch(fetchCurrentUser());
   }, [dispatch]);
   return (
-    <Suspense fallback="">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomeView />} />
-          <Route path="/register" element={<RegisterView />} />
-          <Route path="/login" element={<LoginView />} />
+    !isFetchingCurrentUser && (
+      <Suspense fallback="">
+        <Routes>
           <Route
-            path="/contacts"
-            element={
-              <PrivateRoute>
-                <ContactsView />
-              </PrivateRoute>
-            }
-          />
-        </Route>
-      </Routes>
-    </Suspense>
+            path="/"
+            element={<PublicRoute>{<Spiner /> && <Layout />}</PublicRoute>}
+          >
+            <Route
+              index
+              element={
+                <PublicRoute>
+                  <HomeView />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <PublicRoute restricted>
+                  <RegisterView />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <PublicRoute restricted>
+                  <LoginView />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRoute>
+                  <ContactsView />
+                </PrivateRoute>
+              }
+            />
+          </Route>
+        </Routes>
+      </Suspense>
+    )
   );
 };
 export default App;

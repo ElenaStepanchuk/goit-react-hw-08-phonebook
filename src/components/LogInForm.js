@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import css from './Register&&LogInForm.module.css';
 import { logIn } from '../redux/auth/authOperations';
-// import PropTypes from 'prop-types';
-// import { addContact } from 'redux/contacts/contactsOperations';
-import { useDispatch, useSelector } from 'react-redux';
-// import { getContacts } from 'redux/contacts/contactsSelector';
+import { useDispatch } from 'react-redux';
 export const LogInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   let emailInputId = nanoid();
   let passwordInputId = nanoid();
   const dispatch = useDispatch();
-  //   const contacts = useSelector(getContacts);
   const handleInputChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'email':
@@ -28,14 +24,12 @@ export const LogInForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(logIn({ email, password }));
-
     reset();
   };
   const reset = () => {
     setEmail('');
     setPassword('');
   };
-
   return (
     <form className={css.registerForm} onSubmit={handleSubmit}>
       <label className={css.registerForm__label} htmlFor={emailInputId}>
@@ -60,8 +54,6 @@ export const LogInForm = () => {
           value={password}
           type="text"
           name="password"
-          // pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-          // title="Password must be uppercase and lowercase latin letters, numbers, special characters. Minimum 8 characters."
           required
           id={passwordInputId}
         />

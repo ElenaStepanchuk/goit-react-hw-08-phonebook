@@ -18,3 +18,9 @@
   padding: 10px;
   border-radius: 5px;
 }
+.btn_exit:hover,
+.btn_exit:focus {
+  background-color: white;
+  color: blue;
+  border-radius: 5px;
+}
