@@ -21,11 +21,15 @@ const App = () => {
   }, [dispatch]);
   return (
     !isFetchingCurrentUser && (
-      <Suspense fallback="">
+      <Suspense fallback={<Spiner />}>
         <Routes>
           <Route
             path="/"
-            element={<PublicRoute>{<Spiner /> && <Layout />}</PublicRoute>}
+            element={
+              <PublicRoute>
+                <Layout />
+              </PublicRoute>
+            }
           >
             <Route
               index

@@ -1,34 +1,18 @@
 import { useState } from 'react';
-import ClimbingBoxLoader from 'react-spinners/ClipLoader';
+import RingLoader from 'react-spinners/RingLoader';
 const override = {
   display: 'inherit',
   position: 'relative',
+  margin: '450px auto',
   width: '7.1em',
   height: '7.1em',
 };
 const Spiner = () => {
   let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState('#ffffff');
+  let [color, setColor] = useState('blue');
   return (
-    <div className="sweet-loading">
-      {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
-      <input
-        value={color}
-        onChange={input => setColor(input.target.value)}
-        placeholder="Color of the loader"
-      /> */}
-      {/* <ClimbingBoxLoader
-        color={color}
-        loading={loading}
-        css={override}
-        size={50}
-      /> */}
-      <ClimbingBoxLoader
-        color={color}
-        loading={loading}
-        css={override}
-        size={50}
-      />
+    <div>
+      <RingLoader color={color} loading={loading} css={override} size={150} />
     </div>
   );
 };
