@@ -1,13 +1,33 @@
-.add_contacts {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 1200px) {
+  .add_contacts {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title {
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: center;
+  }
 }
-.title {
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  text-align: center;
+
+@media screen and (max-width: 1199px) {
+  .add_contacts {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+  }
+  .title {
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+  }
 }
