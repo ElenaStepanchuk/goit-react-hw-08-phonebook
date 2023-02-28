@@ -1,35 +1,77 @@
-.form {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
+@media screen and (min-width: 1200px) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  .form__label {
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .form__input {
+    background-color: rgb(212, 212, 248);
+    width: 210px;
+  }
+  .form__input_name {
+    background-color: rgb(212, 212, 248);
+    width: 227px;
+  }
+  .form__btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .form__btn:hover,
+  .form__btn:focus {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
 }
-.form__label {
-  margin-bottom: 20px;
-  color: white;
-  font-weight: bold;
-}
-.form__input {
-  background-color: rgb(212, 212, 248);
-  width: 210px;
-}
-.form__input_name {
-  background-color: rgb(212, 212, 248);
-  width: 227px;
-}
-.form__btn {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  color: blue;
-  padding: 10px;
-  border-radius: 5px;
-}
-.form__btn:hover,
-.form__btn:focus {
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
+@media screen and (max-width: 1199px) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+  .form__label {
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .form__input {
+    background-color: rgb(212, 212, 248);
+    width: 164px;
+  }
+  .form__input_name {
+    background-color: rgb(212, 212, 248);
+    width: 180px;
+  }
+  .form__btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: blue;
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .form__btn:hover,
+  .form__btn:focus {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
 }

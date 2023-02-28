@@ -1,38 +1,83 @@
-.registerForm {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
+@media screen and (min-width: 1200px) {
+  .registerForm {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  .registerForm__label {
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .registerForm__input_name {
+    background-color: rgb(212, 212, 248);
+    width: 234px;
+  }
+  .registerForm__input_email {
+    background-color: rgb(212, 212, 248);
+    width: 237px;
+  }
+  .registerForm__input_password {
+    background-color: rgb(212, 212, 248);
+    width: 207px;
+  }
+  .registerForm__btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .registerForm__btn:hover,
+  .registerForm__btn:focus {
+    background-color: blue;
+    color: white;
+  }
 }
-.registerForm__label {
-  margin-bottom: 20px;
-  color: white;
-  font-weight: bold;
-}
-.registerForm__input_name {
-  background-color: rgb(212, 212, 248);
-  width: 234px;
-}
-.registerForm__input_email {
-  background-color: rgb(212, 212, 248);
-  width: 237px;
-}
-.registerForm__input_password {
-  background-color: rgb(212, 212, 248);
-  width: 207px;
-}
-.registerForm__btn {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  color: blue;
-  padding: 10px;
-  border-radius: 5px;
-}
-.registerForm__btn:hover,
-.registerForm__btn:focus {
-  background-color: blue;
-  color: white;
+@media screen and (max-width: 1199px) {
+  .registerForm {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+  .registerForm__label {
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .registerForm__input_name {
+    background-color: rgb(212, 212, 248);
+    width: 177px;
+  }
+  .registerForm__input_email {
+    background-color: rgb(212, 212, 248);
+    width: 181px;
+  }
+  .registerForm__input_password {
+    background-color: rgb(212, 212, 248);
+    width: 150px;
+  }
+  .registerForm__btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: blue;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .registerForm__btn:hover,
+  .registerForm__btn:focus {
+    background-color: blue;
+    color: white;
+  }
 }

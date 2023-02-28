@@ -1,14 +1,33 @@
-.del__btn {
-  background-color: white;
-  color: blue;
-  padding: 10px;
-  border-radius: 5px;
-  margin-left: 20px;
-  margin-right: 40px;
+@media screen and (min-width: 1200px) {
+  .del__btn {
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+  .del__btn:hover,
+  .del__btn:focus {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
 }
-.del__btn:hover,
-.del__btn:focus {
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
+
+@media screen and (max-width: 1199px) {
+  .del__btn {
+    background-color: white;
+    color: blue;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  .del__btn:hover,
+  .del__btn:focus {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
 }
